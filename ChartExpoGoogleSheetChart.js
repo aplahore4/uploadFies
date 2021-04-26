@@ -1374,7 +1374,7 @@ $(document).ready(function () {
         createdon = $(this).attr("createdon");
         selectedChart = clickedChartName;
 
-        AddScript("https://doc-04-ao-docs.googleusercontent.com/docs/securesc/4rk5cof9mh9g2noe3od806r4a21a2tb9/3afilur1j7n84qh6uvjqkfo0ceiq57qv/1619440800000/10040362025876787199/10040362025876787199/1EklpkOGdEzqX8jn1fnUQncQwVBH_HOmQ?e=download&authuser=0&nonce=0ru7594u98hjm&user=10040362025876787199&hash=4p9pg90kqf5h9fpoocokrgomep4cqim6", "ChartExpo", runInsertChartImageIntoSheetMethod, true);
+        AddScript("https://raw.githubusercontent.com/aplahore4/uploadFies/main/ChartExpo.js", "ChartExpo", runInsertChartImageIntoSheetMethod, true);
         //        AddScript("https://chartexpo.com/ChartExpoForGoogleSheetAddin/Scripts/Polyvista/ChartExpo.February.v1221.js", "ChartExpo", runInsertChartImageIntoSheetMethod, true);
         /*
             //
@@ -2590,7 +2590,7 @@ function insertChartSampleDataIntoSheet(openedFromSource) {
             }
             else {
                 //AddScript("https://chartexpo.com/ChartExpoForGoogleSheetAddin/Scripts/Polyvista/ChartExpo.February.v1221.js", "ChartExpo", addSampleSheetChartIntoMyChartList, true);//runInsertChartImageIntoSheetMethod, true);
-                AddScript("https://doc-04-ao-docs.googleusercontent.com/docs/securesc/4rk5cof9mh9g2noe3od806r4a21a2tb9/3afilur1j7n84qh6uvjqkfo0ceiq57qv/1619440800000/10040362025876787199/10040362025876787199/1EklpkOGdEzqX8jn1fnUQncQwVBH_HOmQ?e=download&authuser=0&nonce=0ru7594u98hjm&user=10040362025876787199&hash=4p9pg90kqf5h9fpoocokrgomep4cqim6", "ChartExpo", addSampleSheetChartIntoMyChartList, true);//runInsertChartImageIntoSheetMethod, true);
+                AddScript("https://raw.githubusercontent.com/aplahore4/uploadFies/main/ChartExpo.js", "ChartExpo", addSampleSheetChartIntoMyChartList, true);//runInsertChartImageIntoSheetMethod, true);
             }
         }
     })
