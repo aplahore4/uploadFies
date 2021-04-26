@@ -1,0 +1,39 @@
+else if (chartObj.canvas.headerNames._guid == savedProperties[i].guid) {
+                var newValue = savedProperties[i]._value;
+                savedProperties[i]._value = chartObj.canvas.headerNames.value();
+                savedProperties[i]._value = savedProperties[i]._value.replace(editableDataPoint.dataPointName, newValue);
+                if (!viewInBrowser) {
+                    if (chartObj.canvas.canvasCustomData.value() == "" || chartObj.canvas.canvasCustomData.value() == "/") {
+                        var arr = [];
+                        var headerName = savedProperties[i]._value.split(",");
+                        for (var i_inner = 0; i_inner < tableHeaderRow[0].length - 1; i_inner++) {
+                            arr.push([headerName[i_inner], tableHeaderRow[0][i_inner]]);
+                        }
+                        chartObj.canvas.canvasCustomData.value(JSON.stringify(arr), true);
+                    }
+                    else {
+                        var value = chartObj.canvas.canvasCustomData.value();
+                        value = value.replace(editableDataPoint.dataPointName, newValue);
+                        value = JSON.parse(value);
+                        var arr = [];
+                        for (var i_inner = 0; i_inner < tableHeaderRow[0].length - 1; i_inner++) {
+                            var found = false;
+                            for (var j = 0; j < value.length; j++) {
+                                if (tableHeaderRow[0][i_inner] == value[j][1]) {
+                                    arr.push([value[j][0], tableHeaderRow[0][i_inner]]);
+                                    found = true;
+                                    break;
+                                }
+                            }
+                            if (!found) {
+                                arr.push([tableHeaderRow[0][i_inner], tableHeaderRow[0][i_inner]]);
+                            }
+                        }
+                        var prop = arr.map(function (d) {
+                            return d[0];
+                        }).join(",");
+                        chartObj.canvas.canvasCustomData.value(JSON.stringify(arr), true);
+                        savedProperties[i]._value = prop;
+                    }
+                }
+            }
